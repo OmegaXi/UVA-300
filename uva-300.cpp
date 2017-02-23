@@ -4,8 +4,8 @@
 
 using namespace std;
 
-char Haab[19][10]={"pop", "no", "zip", "zotz", "tzec", "xul", "yoxkin", "mol", "chen", "yax","zac", "ceh", "mac", "kankin", "muan", "pax", "koyab", "cumhu", "uayet"};
-char Tzolkin[20][10]={"imix", "ik", "akbal", "kan", "chicchan", "cimi","manik", "lamat", "muluk", "ok", "chuen", "eb", "ben","ix", "mem", "cib", "caban", "eznab", "canac", "ahau"};
+char Haab[19][10]={"pop","no","zip","zotz","tzec","xul","yoxkin","mol","chen", "yax","zac", "ceh", "mac","kankin","muan", "pax", "koyab","cumhu","uayet"};
+char Tzolkin[20][10]={"imix","ik","akbal","kan","chicchan","cimi","manik","lamat","muluk","ok","chuen","eb","ben","ix","mem","cib","caban","eznab","canac","ahau"};
 
 main()
 {
@@ -23,7 +23,10 @@ main()
 					sum=year*365+j*20+day;
 					break;
 				}
-				cout<<sum%13+1<<Tzolkin[sum%20]<<sum/260；
+				int a=sum%13+1;
+				int b=Tzolkin[sum%20];
+				int c=sum/260;
+				cout<<a<<b<<c<<endl；
 			}
 		}
 	}
